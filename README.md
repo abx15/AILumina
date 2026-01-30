@@ -1,82 +1,124 @@
-# Ar-Academy
+# AI Lumina - Educational Platform
 
-A modern, responsive educational platform built with React, TypeScript, and Tailwind CSS.
+## 🚀 Project Overview
 
-## Features
+AI Lumina is a modern, AI-powered educational platform designed to provide personalized learning experiences. Built with the latest web technologies, it features a responsive design, interactive course management, and an AI tutor assistant.
 
-- **Course Management**: Browse and enroll in various courses
-- **User Dashboard**: Track your learning progress
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **Modern UI**: Clean and professional interface with shadcn/ui components
+## 🛠 Tech Stack
 
-## Technologies Used
+- **Frontend Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State Management/Data Fetching**: [TanStack Query](https://tanstack.com/query/latest)
 
-- **Frontend Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Routing**: React Router DOM
-- **State Management**: React Query (TanStack Query)
-- **Icons**: Lucide React
+## 📂 Project Structure
 
-## Getting Started
+The project follows a clean, industry-standard folder structure:
+
+```
+src/
+├── components/         # Reusable UI components
+│   ├── common/         # Shared components (Cards, etc.)
+│   ├── layout/         # Layout components (Navbar, Footer)
+│   └── ui/             # Shadcn UI primitives
+├── layouts/            # Page layouts (RootLayout)
+├── pages/              # Application pages/routes
+├── hooks/              # Custom React hooks
+├── lib/                # Utility libraries
+├── services/           # API services (placeholder)
+├── utils/              # Helper functions
+└── App.tsx             # Main application component
+```
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone <YOUR_GIT_URL>
-cd educational
-```
+1.  **Clone the repository:**
 
-2. Install dependencies:
-```bash
-npm install
-```
+    ```bash
+    git clone <repository-url>
+    cd educational
+    ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+2.  **Install dependencies:**
 
-The application will be available at `http://localhost:8080`.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-### Available Scripts
+3.  **Set up environment variables:**
+    Copy `.env.example` to `.env` and update the values if necessary.
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the project for production
-- `npm run build:dev` - Build for development
-- `npm run preview` - Preview the production build
-- `npm run lint` - Run ESLint for code linting
+    ```bash
+    cp .env.example .env
+    ```
 
-## Project Structure
+4.  **Run the development server:**
 
-```
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # shadcn/ui components
-│   └── ...
-├── pages/              # Page components
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions
-├── data/               # Static data
-├── assets/             # Images and other assets
-└── ...
-```
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-## Contributing
+    The app will be available at `http://localhost:5173`.
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
+## 🐳 Docker Support
 
-## License
+To run the application in a Docker container:
 
-This project is licensed under the MIT License.
+1.  **Build the Docker image:**
+
+    ```bash
+    docker build -t ai-lumina .
+    ```
+
+2.  **Run the container:**
+
+    ```bash
+    docker run -p 8080:80 ai-lumina
+    ```
+
+    Access the app at `http://localhost:8080`.
+
+## 📦 Deployment
+
+### Vercel
+
+The project is configured for Vercel deployment with a `vercel.json` file handling SPA routing.
+
+1.  Push your code to a Git repository.
+2.  Import the project into Vercel.
+3.  Vercel will detect the Vite build settings automatically.
+
+### CI/CD
+
+A Github Actions workflow is included in `.github/workflows/ci.yml`. It automatically:
+
+- Lints the code
+- Builds the project
+- Attempts a Docker build
+
+## 🤝 Contributing
+
+1.  Fork the repository
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## 📄 License
+
+Distributed under the MIT License.

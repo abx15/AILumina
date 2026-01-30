@@ -1,5 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { useState, useRef, useEffect } from "react";
 import { Send, User, Bot, Sparkles } from "lucide-react";
 
@@ -40,7 +38,6 @@ const AITutor = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-muted/20">
-      <Navbar />
       <main className="flex-1 w-full flex flex-col overflow-hidden">
         <div className="w-full max-w-5xl mx-auto flex-1 flex flex-col bg-card shadow-lg border-x border-border md:my-4 md:rounded-2xl overflow-hidden">
           {/* Header */}
@@ -130,7 +127,6 @@ const AITutor = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

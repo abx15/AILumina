@@ -13,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import AITutor from "./pages/AITutor";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import RootLayout from "./layouts/RootLayout";
 
 const queryClient = new QueryClient();
 
@@ -23,13 +24,15 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:id" element={<CourseDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/ai-tutor" element={<AITutor />} />
+          <Route element={<RootLayout />}>
+            <Route path="/" element={<Index />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:id" element={<CourseDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/ai-tutor" element={<AITutor />} />
+          </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} />

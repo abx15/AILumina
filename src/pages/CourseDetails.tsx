@@ -23,8 +23,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { courses } from "@/data/siteData";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 
@@ -101,8 +99,6 @@ const CourseDetails = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
-
       <main className="flex-1">
         {/* Course Banner */}
         <section className="bg-foreground text-background py-16 lg:py-24 relative overflow-hidden">
@@ -199,7 +195,7 @@ const CourseDetails = () => {
                                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                                     <span className="font-medium">{item}</span>
                                   </div>
-                                )
+                                ),
                               )
                             : [
                                 "Deep understanding of AI integration patterns",
@@ -277,12 +273,12 @@ const CourseDetails = () => {
                                           {lesson.duration}
                                         </span>
                                       </div>
-                                    )
+                                    ),
                                   )}
                                 </div>
                               </AccordionContent>
                             </AccordionItem>
-                          )
+                          ),
                         )}
                       </Accordion>
                     </div>
@@ -440,8 +436,6 @@ const CourseDetails = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

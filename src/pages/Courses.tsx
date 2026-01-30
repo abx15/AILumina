@@ -10,9 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import CourseCard from "@/components/CourseCard";
+import CourseCard from "@/components/common/CourseCard";
 import { courses } from "@/data/siteData";
 
 const categories = [
@@ -47,8 +45,6 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       {/* Hero Banner */}
       <section className="bg-gradient-primary py-16 md:py-24">
         <div className="container-custom text-center">
@@ -175,8 +171,6 @@ const Courses = () => {
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

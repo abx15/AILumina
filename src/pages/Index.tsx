@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { BarChart3, Bot, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import TestimonialCard from "@/components/TestimonialCard";
-import BlogCard from "@/components/BlogCard";
+import TestimonialCard from "@/components/common/TestimonialCard";
+import BlogCard from "@/components/common/BlogCard";
 import { testimonials, blogPosts } from "@/data/siteData";
 import heroImage from "@/assets/hero-image.png";
 import aboutTeam from "@/assets/about-team.jpg";
@@ -142,8 +140,6 @@ const TechIcon = ({
 const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background">
@@ -337,8 +333,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

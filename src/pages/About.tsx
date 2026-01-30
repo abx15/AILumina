@@ -11,8 +11,6 @@ import {
   Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { stats, teamMembers } from "@/data/siteData";
 import aboutTeam from "@/assets/about-team.jpg";
 import heroImage from "@/assets/hero-image.png";
@@ -48,8 +46,6 @@ const values = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       {/* Hero Section */}
       <section className="bg-gradient-primary py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -61,8 +57,9 @@ const About = () => {
             About EduLearn
           </h1>
           <p className="text-primary-foreground/80 text-lg md:text-xl max-w-3xl mx-auto">
-            We're on a mission to transform lives through quality education. Since 2014, we've
-            helped over 50,000 students worldwide achieve their learning goals.
+            We're on a mission to transform lives through quality education.
+            Since 2014, we've helped over 50,000 students worldwide achieve
+            their learning goals.
           </p>
         </div>
       </section>
@@ -72,19 +69,23 @@ const About = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-primary font-semibold mb-2 block">WHO WE ARE</span>
+              <span className="text-primary font-semibold mb-2 block">
+                WHO WE ARE
+              </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Empowering Learners Worldwide
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                EduLearn was founded with a simple yet powerful idea: everyone deserves access
-                to quality education. What started as a small team of passionate educators has
-                grown into a global platform serving learners in over 150 countries.
+                EduLearn was founded with a simple yet powerful idea: everyone
+                deserves access to quality education. What started as a small
+                team of passionate educators has grown into a global platform
+                serving learners in over 150 countries.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Our platform combines cutting-edge technology with expert instruction to deliver
-                engaging, effective learning experiences. Whether you're looking to advance your
-                career, learn a new skill, or explore a new passion, we're here to support your
+                Our platform combines cutting-edge technology with expert
+                instruction to deliver engaging, effective learning experiences.
+                Whether you're looking to advance your career, learn a new
+                skill, or explore a new passion, we're here to support your
                 journey.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -110,8 +111,12 @@ const About = () => {
                 className="rounded-2xl shadow-xl w-full"
               />
               <div className="absolute -bottom-6 -left-6 bg-primary p-6 rounded-2xl shadow-primary">
-                <div className="text-4xl font-bold text-primary-foreground">10+</div>
-                <div className="text-primary-foreground/80">Years of Excellence</div>
+                <div className="text-4xl font-bold text-primary-foreground">
+                  10+
+                </div>
+                <div className="text-primary-foreground/80">
+                  Years of Excellence
+                </div>
               </div>
             </div>
           </div>
@@ -122,7 +127,9 @@ const About = () => {
       <section className="py-20 bg-muted/50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-primary font-semibold mb-2 block">OUR PURPOSE</span>
+            <span className="text-primary font-semibold mb-2 block">
+              OUR PURPOSE
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               What Drives Us Forward
             </h2>
@@ -136,7 +143,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">
+                  {value.title}
+                </h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </div>
             ))}
@@ -148,13 +157,15 @@ const About = () => {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-primary font-semibold mb-2 block">OUR TEAM</span>
+            <span className="text-primary font-semibold mb-2 block">
+              OUR TEAM
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Meet the People Behind EduLearn
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our diverse team of educators, technologists, and creatives work together to
-              deliver the best learning experience possible.
+              Our diverse team of educators, technologists, and creatives work
+              together to deliver the best learning experience possible.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -171,7 +182,9 @@ const About = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-1">{member.name}</h3>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h3>
                   <p className="text-primary">{member.role}</p>
                 </div>
               </div>
@@ -201,7 +214,9 @@ const About = () => {
                 <div className="text-4xl font-bold text-primary-foreground mb-2">
                   {achievement.value}
                 </div>
-                <div className="text-primary-foreground/80">{achievement.label}</div>
+                <div className="text-primary-foreground/80">
+                  {achievement.label}
+                </div>
               </div>
             ))}
           </div>
@@ -215,7 +230,8 @@ const About = () => {
             Ready to Start Your Learning Journey?
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of learners who are already transforming their careers with EduLearn.
+            Join thousands of learners who are already transforming their
+            careers with EduLearn.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="xl" asChild>
@@ -230,8 +246,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LogIn, Sparkles, Fingerprint, Chrome, Github } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { toast } from "@/hooks/use-toast";
 
 const Login = () => {
@@ -25,14 +25,14 @@ const Login = () => {
 
       // Find user
       const user = users.find(
-        (u: any) => u.email === email && u.password === password
+        (u: any) => u.email === email && u.password === password,
       );
 
       if (user) {
         // Set active user
         localStorage.setItem(
           "user",
-          JSON.stringify({ name: user.name, email: user.email })
+          JSON.stringify({ name: user.name, email: user.email }),
         );
 
         toast({

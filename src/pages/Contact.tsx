@@ -20,8 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 import { toast } from "@/hooks/use-toast";
 
 const contactInfo = [
@@ -81,7 +80,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -91,8 +90,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       {/* Hero Section */}
       <section className="bg-gradient-primary py-20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -274,8 +271,6 @@ const Contact = () => {
           </Button>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

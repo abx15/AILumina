@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   const [user, setUser] = useState<{ name: string; email: string } | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -21,7 +19,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <main className="flex-1 w-full flex flex-col items-center justify-center p-8 bg-muted/30">
         <div className="w-full max-w-6xl space-y-8 animate-fade-in">
           <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-card p-8 rounded-2xl shadow-sm border border-border">
@@ -95,7 +92,6 @@ const Dashboard = () => {
           </section>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
